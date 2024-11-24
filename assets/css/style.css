@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: fantasy;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "sidebar"
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: auto;
+  grid-template-rows: auto auto 1fr auto;
+  height: 100vh;
+}
+
+@media (min-width: 576px) {
+  .grid-container {
+    grid-template-areas:
+      "header header"
+      "sidebar main"
+      "footer main";
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+  }
+
+  .nav-style {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0;
+  }
+
+  nav {
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+  }
+  a {
+    font-size: 20px;
+  }
+  .burguer {
+    display: none;
+  }
+  input {
+    width: 90%;
+  }
+
+  .products {
+    justify-content: space-around;
+  }
+}
+
+header {
+  grid-area: header;
+  background-color: #97d8c4;
+  text-align: center;
+  height: 100%;
+}
+
+.social-media-icons a {
+  margin: 2px;
+}
+nav {
+  grid-area: sidebar;
+  background-color: #7ebdc2;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main {
+  grid-area: main;
+  text-align: center;
+  padding: 20px;
+  overflow: auto;
+  background-image: url("../img/fondo_patitas.jpg");
+  background-size: 30%;
+  background-position: right;
+
+  background-attachment: fixed;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #97d8c4;
+  text-align: center;
+  height: 50px;
+  padding: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.nav-style {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 288px;
+  height: auto;
+  border: 4px solid #16262e;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-family: Cambria;
+  text-align: center;
+  background-color: #7ebdc2;
+  opacity: 90%;
+}
+
+.card:hover {
+  background-color: #79b791;
+  color: white;
+  transform: translateY(-10px);
+}
+
+.card-descript:hover {
+  color: white;
+}
+
+.card img {
+  padding-top: 10px;
+  width: 90%;
+  height: 220px;
+  border-radius: 8px;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-title {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.card-descript {
+  font-size: 1.5rem;
+  color: black;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.burguer:hover {
+  background-color: #2b3a67;
+  color: white;
+  transform: translateY(-2px);
+}
+
+li a:hover {
+  background-color: #2b3a67;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.social-media-icons a:hover {
+  background-color: #7ebdc2;
+  color: white;
+  transform: translateY(-2px);
+}
